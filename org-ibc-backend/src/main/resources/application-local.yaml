@@ -1,0 +1,46 @@
+server:
+  port: 9003
+  servlet:
+    context-path: /api/ibc/
+
+
+spring:
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://localhost:3306/ibc?useSSL=false&serverTimezone=America/Lima
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  jackson:
+    time-zone: America/Lima
+    date-format: yyyy-MM-dd HH:mm:ss
+    locale: es_PE
+    default-property-inclusion: non_null
+#    hikari:
+#      idle-timeout: 100000
+#      connectionTimeout: 67000
+#      maxLifetime: 1000000
+#      minimumIdle: 5
+#      maximumPoolSize: 100
+#      poolName: SpringBootHikariCP
+logging:
+  config: classpath:logging/logback.xml
+aws:
+  access_key_id: AKIAXSDEPOYV2K74MYOP
+  secret_access_key: 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
+  s3:
+    region: us-east-1
+    bucket: request-prescriptions
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+autenticacion:
+  url: http://127.0.0.1:9005/canales/api/v1/auth/tokens

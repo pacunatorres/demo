@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "bf99b982-8d14-48af-be09-00661ed31f9b",
+		"name": "persona",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13970006"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWN1bmF0b3JyZXMiLCJleHAiOjE2OTAyNTQyODEsImlhdCI6MTY5MDIxODI4MX0.LEn4-83xIZ_vDB5ETwm-6SSZq_eF5m4hmz6Eo0t4c_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\": \"Juan\",\r\n    \"apellidos\": \"Perez\",\r\n    \"dni\": \"12345678\",\r\n    \"fechaNacimiento\": \"2023-03-27\",\r\n    \"sede\":\"constructores\",\r\n    \"ministerio\":\"varones\",\r\n    \"condicion\":\"activo\",\r\n    \"situacion\":\"situacion2\",\r\n    \"madre\": {\r\n        \"nombres\": \"Cristina\",\r\n        \"apellidos\": \"Torres\",\r\n        \"dni\": \"3635533\",\r\n        \"celular\":\"1234566\",\r\n        \"telefono\": \"123456\"\r\n    },\r\n    \"sexo\" : \"Masculino\",\r\n    \"celular\":\"12345677\",\r\n    \"listaHijos\":[ {\r\n        \"nombres\": \"hijo1\",\r\n        \"apellidos\": \"ap_hijo1\",\r\n        \"celular\":\"123\",\r\n        \"telefono\": \"123\"\r\n    },\r\n     {\r\n        \"nombres\": \"hijo2\",\r\n        \"apellidos\": \"ap_hijo1\",\r\n        \"celular\":\"1234\",\r\n        \"telefono\": \"1234\"\r\n    }\r\n    \r\n    ]\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/ibc/persona/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"ibc",
+						"persona",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWN1bmF0b3JyZXMiLCJleHAiOjE2ODI4Njk4NTgsImlhdCI6MTY4MjgzMzg1OH0.gWOjgwF-WWJ2DMFbI8kvQCS18Kn96mQx2HQabBTpIuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sede\":\"constructores\",\r\n    \"condicion\": \"miembro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/ibc/persona/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"ibc",
+						"persona",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWN1bmF0b3JyZXMiLCJleHAiOjE2ODI4Njk4NTgsImlhdCI6MTY4MjgzMzg1OH0.gWOjgwF-WWJ2DMFbI8kvQCS18Kn96mQx2HQabBTpIuU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sede\":\"constructores\",\r\n    \"condicion\": \"miembro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/ibc/persona/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"ibc",
+						"persona",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

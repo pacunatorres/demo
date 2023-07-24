@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "2b5e9222-e0e2-4f12-a4b8-97bf7c1ef02f",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13970006"
+	},
+	"item": [
+		{
+			"name": "save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwYWN1bmF0b3JyZXMiLCJleHAiOjE2OTAyNTQyODEsImlhdCI6MTY5MDIxODI4MX0.LEn4-83xIZ_vDB5ETwm-6SSZq_eF5m4hmz6Eo0t4c_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"pacuna\",\r\n    \"password\":\"pass\",\r\n    \"nombre\": \"Pedro\",\r\n    \"apellido\":\"Acuña Torres\",\r\n    \"email\":\"pacunatorres@gmail.com\",\r\n    \"telefono\":\"123456789\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/ibc/usuario/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"ibc",
+						"usuario",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"pacunatorres\",\r\n    \"password\": \"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/ibc/generate-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"ibc",
+						"generate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"pacunatorres\",\r\n    \"password\": \"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/api/ibc/generate-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"api",
+						"ibc",
+						"generate-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
